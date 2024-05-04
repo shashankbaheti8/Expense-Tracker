@@ -81,7 +81,6 @@ const TransactionAdd = () => {
             id="title"
             value={data.title}
             onChange={(e) => handleTitleChange(e.target.value)}
-            autoFocus
           />
           {validationErrors.title && (
             <div className="error">{validationErrors.title}</div>

@@ -1,7 +1,6 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import AppReducer from "./AppReducer";
 
-// Initial state
 const initialState = {
   transactions: [],
 };
@@ -26,14 +25,12 @@ export const GlobalProvider = ({ children }) => {
     saveToLS();
   }, [state.transactions]);
 
-  // Actions
   function deleteTransaction(id) {
     console.log(id);
     dispatch({
       type: "DELETE",
       payload: id,
     });
-    // saveToLS();
   }
 
   function addTransaction(transaction) {
@@ -41,7 +38,6 @@ export const GlobalProvider = ({ children }) => {
       type: "ADD",
       payload: transaction,
     });
-    // saveToLS();
   }
 
   return (
